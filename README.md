@@ -42,25 +42,27 @@
 
 ## Инструкция по запуску проекта
 1. Клонируйте репозиторий:
-   `git clone https://github.com/Antis85/cinema-server.git`
-2. Перейдите в каталог проекта: `cd cinema-server`
+   `git clone git@github.com:karaciubamikhail/cinema-server_php.git`
+2. Перейдите в каталог проекта: `cd cinema-server_php`
+3. Выполнить команду npm run production
 3. Убедитесь, что установлен пакет [Composer](https://getcomposer.org/): `composer -v`
 4. Установите зависимости `composer install`
-5. Файл `.env.example` переименуйте в `.env` и произведите настройку базы данных и других параметров.
-6. Для настройки на работу с SQLite в файле .env нужно:
-    * указать тип DB_CONNECTION=sqlite
-    * в папке datebase создать файл с расширением .sqlite (или взять готовый)
-    * указать абсолютный путь к файлу .sqlite (в windows необходимо экранировать обратный слеш)
-7. Выполните команду `php artisan key:generate`
-8. В файле `php.ini` раскоментируйте следующие строки:
+5. Файл `.env.example` переименуйте в `.env`.
+6. Выполните команду `php artisan key:generate`
+7. В файле `php.ini` раскоментируйте следующие строки:
 ```
-extension=fileinfo
-extension=gd
-extension=pdo_sqlite
 extension=openssl
-extension=php_mbstring.dll
+extension=fileinfo
+extension=mbstring
+extension=pdo_mysql
+extension=mysqli
+extension=curl
+extension=zip
+extension=tokenizer
+extension=intl
+;extension=pdo_sqlite
 ```
 9. Для выдачи статики, выполните команду `php artisan storage:link`
 10. Выполните миграции для создания базы данных и заполнения предустановленными значениями: `php artisan migrate:fresh --seed`
 11. Запустите приложение: `php artisan serve`
-12. Далее можно использовать приложения [клиента](https://github.com/Antis85/cinema-client) или [администратора](https://github.com/Antis85/cinema-admin).
+12. Далее можно использовать приложения [клиента](https://github.com/karaciubamikhail/cinema-client) или [администратора](https://github.com/karaciubamikhail/cinema-server).
