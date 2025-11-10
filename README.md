@@ -67,6 +67,8 @@ extension=intl
 cd database
 11. Создай пустой файл командой PowerShell:
 New-Item -ItemType File database.sqlite
+12. Вернитесь на уровень назад cd ../
 12. Выполните миграции для создания базы данных и заполнения предустановленными значениями: `php artisan migrate:fresh --seed`
-13. Запустите приложение: `php artisan serve`
-14. Далее можно использовать приложения [клиента](https://github.com/karaciubamikhail/cinema-client) или [администратора](https://github.com/karaciubamikhail/cinema-server).
+13. Для выдачи статики, выполните команду php artisan storage:link
+14. Запустите приложение: `php artisan serve`
+15. Далее можно использовать приложения [клиента](https://github.com/karaciubamikhail/cinema-client) или [администратора](https://github.com/karaciubamikhail/cinema-server).
