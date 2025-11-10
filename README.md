@@ -63,11 +63,9 @@ extension=tokenizer
 extension=intl
 ;extension=pdo_sqlite
 ```
-Перейди в папку database:
-
-cd C:\Users\karat\cinema-server_php\database
-Создай пустой файл командой PowerShell:
-
+8.Перейди в папку database:
+cd database
+9.Создай пустой файл командой PowerShell:
 New-Item -ItemType File database.sqlite
 10. Выполните миграции для создания базы данных и заполнения предустановленными значениями: `php artisan migrate:fresh --seed`
 11. Запустите приложение: `php artisan serve`
