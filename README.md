@@ -45,12 +45,12 @@
    `git clone git@github.com:karaciubamikhail/cinema-server_php.git`
 2. Перейдите в каталог проекта: `cd cinema-server_php`
 3. Выполнить команду npm i
-3. Выполнить команду npm run production
-3. Убедитесь, что установлен пакет [Composer](https://getcomposer.org/): `composer -v`
-4. Установите зависимости `composer install`
-5. Файл `.env.example` переименуйте в `.env`.
-6. Выполните команду `php artisan key:generate`
-7. В файле `php.ini` раскоментируйте следующие строки:
+4. Выполнить команду npm run production
+5. Убедитесь, что установлен пакет [Composer](https://getcomposer.org/): `composer -v`
+6. Установите зависимости `composer install`
+7. Файл `.env.example` переименуйте в `.env`.
+8. Выполните команду `php artisan key:generate`
+9. В файле `php.ini` раскоментируйте следующие строки:
 ```
 extension=openssl
 extension=fileinfo
@@ -63,10 +63,10 @@ extension=tokenizer
 extension=intl
 ;extension=pdo_sqlite
 ```
-8.Перейди в папку database:
+10. Перейди в папку database:
 cd database
-9.Создай пустой файл командой PowerShell:
+11. Создай пустой файл командой PowerShell:
 New-Item -ItemType File database.sqlite
-10. Выполните миграции для создания базы данных и заполнения предустановленными значениями: `php artisan migrate:fresh --seed`
-11. Запустите приложение: `php artisan serve`
-12. Далее можно использовать приложения [клиента](https://github.com/karaciubamikhail/cinema-client) или [администратора](https://github.com/karaciubamikhail/cinema-server).
+12. Выполните миграции для создания базы данных и заполнения предустановленными значениями: `php artisan migrate:fresh --seed`
+13. Запустите приложение: `php artisan serve`
+14. Далее можно использовать приложения [клиента](https://github.com/karaciubamikhail/cinema-client) или [администратора](https://github.com/karaciubamikhail/cinema-server).
