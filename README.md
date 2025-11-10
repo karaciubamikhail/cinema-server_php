@@ -44,6 +44,7 @@
 1. Клонируйте репозиторий:
    `git clone git@github.com:karaciubamikhail/cinema-server_php.git`
 2. Перейдите в каталог проекта: `cd cinema-server_php`
+3. Выполнить команду npm i
 3. Выполнить команду npm run production
 3. Убедитесь, что установлен пакет [Composer](https://getcomposer.org/): `composer -v`
 4. Установите зависимости `composer install`
@@ -62,7 +63,12 @@ extension=tokenizer
 extension=intl
 ;extension=pdo_sqlite
 ```
-9. Для выдачи статики, выполните команду `php artisan storage:link`
+Перейди в папку database:
+
+cd C:\Users\karat\cinema-server_php\database
+Создай пустой файл командой PowerShell:
+
+New-Item -ItemType File database.sqlite
 10. Выполните миграции для создания базы данных и заполнения предустановленными значениями: `php artisan migrate:fresh --seed`
 11. Запустите приложение: `php artisan serve`
 12. Далее можно использовать приложения [клиента](https://github.com/karaciubamikhail/cinema-client) или [администратора](https://github.com/karaciubamikhail/cinema-server).
