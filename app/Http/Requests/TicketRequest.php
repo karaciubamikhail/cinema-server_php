@@ -34,7 +34,7 @@ class TicketRequest extends FormRequest
             'seats.seatsIds.*' => ['required', 'integer'],
             'seats' => ['required', 'array:seatsInfo,seatsIds'],
             'date' => ['required', 'date_format:Y-m-d'],
-            'price' => ['required', 'numeric'],
+            'price' => ['required', 'numeric', 'min:1'],
         ];
     }
 

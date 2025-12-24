@@ -28,10 +28,10 @@ class HallRequest extends FormRequest
     {
         return [
             'name' => ['required', 'sometimes', 'string'],
-            'total_rows' => ['required', 'sometimes', 'nullable', 'integer'],
-            'total_cols' => ['required', 'sometimes', 'nullable', 'integer'],
-            'price_standard' => ['required', 'sometimes', 'nullable', 'integer'],
-            'price_vip' => ['required', 'sometimes', 'nullable', 'integer'],
+            'total_rows' => ['required', 'sometimes', 'nullable', 'integer', 'min:1'],
+            'total_cols' => ['required', 'sometimes', 'nullable', 'integer', 'min:1'],
+            'price_standard' => ['required', 'sometimes', 'nullable', 'integer', 'min:0'],
+            'price_vip' => ['required', 'sometimes', 'nullable', 'integer','min:0'],
         ];
     }
 
